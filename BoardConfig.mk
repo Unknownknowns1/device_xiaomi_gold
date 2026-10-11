@@ -74,17 +74,13 @@ TARGET_KERNEL_NO_GCC := true
 TARGET_KERNEL_VERSION := 6.6
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_IMAGE_NAME := Image.gz
-TARGET_KERNEL_SOURCE := kernel/xiaomi/gold-6.6
-TARGET_KERNEL_CONFIG := \
-	gki_defconfig \
-	gold.config
 
 # Keep the kernel, DTB, DTBO and vendor modules fom stock until the in-tree MT6833 clock/power/module
 TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/kernel
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
 BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)-kernel/dtb
-BOARD_SYSTEM_DLKM_SRC := $(DEVICE_PATH)-kernel/system_dlkm
+BOARD_PREBUILT_SYSTEM_DLKMIMAGE := $(DEVICE_PATH)-kernel/system_dlkm.img
 
 # These optional MIUI scheduling modules were built for 6.6.30 and are rejected
 # by the 6.6.118 kernel. Binder itself is provided by GKI; binder_prio remains.
