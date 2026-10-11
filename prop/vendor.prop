@@ -277,18 +277,9 @@ persist.vendor.ims_support=1
 persist.vendor.mtk_dynamic_ims_switch=1
 persist.vendor.mtk_wfc_support=1
 persist.vendor.volte_support=1
+persist.vendor.mtk.volte.enable=1
 persist.vendor.vilte_support=1
 persist.vendor.viwifi_support=1
-persist.vendor.radio.5g_mode_pref=1
-persist.vendor.radio.smart_5g=0
-persist.vendor.radio.nr_disable=0
-persist.vendor.radio.nr_sa_mode=1
-ro.vendor.mtk_telephony_add_on_policy=0
-persist.vendor.radio.vonr_setting_support=1
-persist.vendor.radio.vonr_enabled=1
-ro.vendor.mtk_vonr_support=1
-persist.vendor.radio.enable_temp_dds=true
-ro.telephony.iwlan_operation_mode=AP-assisted
 
 # TEE
 ro.vendor.mtk_tee_gp_support=1

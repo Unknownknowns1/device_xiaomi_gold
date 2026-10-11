@@ -26,38 +26,3 @@ ro.lmk.swap_free_low_percentage=10
 
 # Device specific properties
 import /product/etc/sku/${ro.boot.product.hardware.sku}.prop
-
-# IMS / VoLTE / VoWiFi / VoNR
-persist.vendor.radio.volte_enabled=1
-persist.vendor.radio.vowifi_enabled=1
-persist.vendor.radio.wfc_support=1
-persist.vendor.mtk_wfc_support=1
-persist.vendor.radio.vonr_enabled=1
-persist.vendor.radio.vonr_setting_support=1
-ro.vendor.mtk_vonr_support=1
-persist.vendor.radio.ims_nr_enabled=1
-persist.dbg.volte_avail_ovr=1
-persist.dbg.vt_avail_ovr=1
-persist.dbg.wfc_avail_ovr=1
-persist.vendor.vilte_support=0
-persist.vendor.ims_support=1
-persist.vendor.volte_support=1
-persist.vendor.mims_support=2
-ro.vendor.md_auto_setup_ims=1
-
-# Telephony / 5G Stability / SA / Smart 5G
-ro.telephony.default_network=33,33,33,33
-persist.vendor.radio.5g_mode_pref=1
-persist.vendor.radio.smart_5g=0
-persist.sys.wfc.supported=1
-persist.vendor.radio.nr_disable=0
-persist.vendor.radio.nr_sa_mode=1
-ro.vendor.mtk_telephony_add_on_policy=0
-persist.vendor.radio.msimmode=dsds
-persist.vendor.radio.mtk_dsbp_support=2
-persist.vendor.radio.mtk_ps2_rat=N/L/W/G
-persist.vendor.radio.mtk_ps3_rat=G
-persist.vendor.radio.smart.data.switch=1
-persist.vendor.radio.enable_temp_dds=true
-telephony.lteOnCdmaDevice=1
-ro.telephony.iwlan_operation_mode=AP-assisted

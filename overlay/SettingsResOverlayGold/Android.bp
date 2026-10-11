@@ -7,5 +7,5 @@
 runtime_resource_overlay {
     name: "SettingsResOverlayGold",
     resource_dirs: ["res"],
-    product_specific: true,
+    vendor: true,
 }
