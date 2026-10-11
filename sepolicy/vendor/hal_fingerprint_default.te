@@ -2,6 +2,13 @@
 allow hal_fingerprint_default gold_sysfs_fingerprint:dir r_dir_perms;
 allow hal_fingerprint_default gold_sysfs_fingerprint:file rw_file_perms;
 
+# Wakeup and input events for side fingerprint / navigation
+allow hal_fingerprint_default sysfs_wakeup:dir r_dir_perms;
+allow hal_fingerprint_default sysfs_wakeup:file rw_file_perms;
+allow hal_fingerprint_default uinput_device:chr_file rw_file_perms;
+allow hal_fingerprint_default input_device:dir r_dir_perms;
+allow hal_fingerprint_default input_device:chr_file rw_file_perms;
+
 # The legacy module probes modalias files to discover its transport.
 allow hal_fingerprint_default {
     mtee_trusty_file

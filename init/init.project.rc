@@ -82,7 +82,7 @@ on post-fs-data
 
 #fingerprint
     chown system system /dev/goodix_fp
-    chmod 0644 /dev/goodix_fp
+    chmod 0666 /dev/goodix_fp
     chown system system /sys/bus/platform/devices/fingerprint/clk_enable
     chmod 0660 /sys/bus/platform/devices/fingerprint/clk_enable
     chown system /sys/bus/platform/devices/fingerprint/irq
