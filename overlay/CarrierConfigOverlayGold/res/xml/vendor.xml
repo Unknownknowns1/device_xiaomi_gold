@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<carrier_config_list>
+    <!-- Default Configuration -->
+    <carrier_config>
+        <boolean name="vonr_enabled_bool" value="true" />
+        <boolean name="vonr_setting_visibility_bool" value="true" />
+        <boolean name="carrier_vonr_available_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_volte_show_switch_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_roaming_enabled_bool" value="true" />
+        <boolean name="carrier_wfc_supports_wifi_only_bool" value="true" />
+        <boolean name="editable_wfc_mode_bool" value="true" />
+        <boolean name="editable_wfc_roaming_mode_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="2" />
+        <int name="carrier_default_wfc_ims_roaming_mode_int" value="2" />
+        <int-array name="5g_nr_ssrsrp_thresholds_int_array" num="4">
+            <item value="-125" />
+            <item value="-115" />
+            <item value="-105" />
+            <item value="-95" />
+        </int-array>
+        <string name="5g_icon_configuration_string">connected_mmwave:5G,connected:5G,connected_rrc_idle:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G</string>
+        <string name="5g_icon_display_grace_period_string">connected_mmwave,legacy,30;connected,legacy,30;not_restricted_rrc_idle,legacy,30;not_restricted_rrc_con,legacy,30</string>
+        <int name="nr_advanced_bands_secondary_timer_seconds_int" value="30" />
+        <int-array name="carrier_nr_availabilities_int_array" num="2">
+            <item value="1" />
+            <item value="2" />
+        </int-array>
+        <boolean name="enable_nr_advanced_for_standalone_bool" value="true" />
+    </carrier_config>
+
+    <!-- Reliance Jio (cid: 2018) -->
+    <carrier_config cid="2018">
+        <boolean name="vonr_enabled_bool" value="true" />
+        <boolean name="vonr_setting_visibility_bool" value="true" />
+        <boolean name="carrier_vonr_available_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_volte_show_switch_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_roaming_enabled_bool" value="true" />
+        <boolean name="carrier_wfc_supports_wifi_only_bool" value="true" />
+        <boolean name="editable_wfc_mode_bool" value="true" />
+        <boolean name="editable_wfc_roaming_mode_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="2" />
+        <int name="carrier_default_wfc_ims_roaming_mode_int" value="2" />
+        <int-array name="5g_nr_ssrsrp_thresholds_int_array" num="4">
+            <item value="-125" />
+            <item value="-115" />
+            <item value="-105" />
+            <item value="-95" />
+        </int-array>
+        <string name="5g_icon_configuration_string">connected_mmwave:5G,connected:5G,connected_rrc_idle:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G</string>
+        <string name="5g_icon_display_grace_period_string">connected_mmwave,legacy,30;connected,legacy,30;not_restricted_rrc_idle,legacy,30;not_restricted_rrc_con,legacy,30</string>
+        <int name="nr_advanced_bands_secondary_timer_seconds_int" value="30" />
+        <int-array name="carrier_nr_availabilities_int_array" num="2">
+            <item value="1" />
+            <item value="2" />
+        </int-array>
+        <boolean name="enable_nr_advanced_for_standalone_bool" value="true" />
+    </carrier_config>
+
+    <!-- Bharti Airtel (cid: 2108 / 2021) -->
+    <carrier_config cid="2108">
+        <boolean name="vonr_enabled_bool" value="true" />
+        <boolean name="vonr_setting_visibility_bool" value="true" />
+        <boolean name="carrier_vonr_available_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_volte_show_switch_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_roaming_enabled_bool" value="true" />
+        <boolean name="carrier_wfc_supports_wifi_only_bool" value="true" />
+        <boolean name="editable_wfc_mode_bool" value="true" />
+        <boolean name="editable_wfc_roaming_mode_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="2" />
+        <int name="carrier_default_wfc_ims_roaming_mode_int" value="2" />
+        <int-array name="5g_nr_ssrsrp_thresholds_int_array" num="4">
+            <item value="-125" />
+            <item value="-115" />
+            <item value="-105" />
+            <item value="-95" />
+        </int-array>
+        <string name="5g_icon_configuration_string">connected_mmwave:5G,connected:5G,connected_rrc_idle:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G</string>
+        <string name="5g_icon_display_grace_period_string">connected_mmwave,legacy,30;connected,legacy,30;not_restricted_rrc_idle,legacy,30;not_restricted_rrc_con,legacy,30</string>
+        <int name="nr_advanced_bands_secondary_timer_seconds_int" value="30" />
+        <int-array name="carrier_nr_availabilities_int_array" num="2">
+            <item value="1" />
+            <item value="2" />
+        </int-array>
+        <boolean name="enable_nr_advanced_for_standalone_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config cid="2021">
+        <boolean name="vonr_enabled_bool" value="true" />
+        <boolean name="vonr_setting_visibility_bool" value="true" />
+        <boolean name="carrier_vonr_available_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_volte_show_switch_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_roaming_enabled_bool" value="true" />
+        <boolean name="carrier_wfc_supports_wifi_only_bool" value="true" />
+        <boolean name="editable_wfc_mode_bool" value="true" />
+        <boolean name="editable_wfc_roaming_mode_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="2" />
+        <int name="carrier_default_wfc_ims_roaming_mode_int" value="2" />
+        <int-array name="5g_nr_ssrsrp_thresholds_int_array" num="4">
+            <item value="-125" />
+            <item value="-115" />
+            <item value="-105" />
+            <item value="-95" />
+        </int-array>
+        <string name="5g_icon_configuration_string">connected_mmwave:5G,connected:5G,connected_rrc_idle:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G</string>
+        <string name="5g_icon_display_grace_period_string">connected_mmwave,legacy,30;connected,legacy,30;not_restricted_rrc_idle,legacy,30;not_restricted_rrc_con,legacy,30</string>
+        <int name="nr_advanced_bands_secondary_timer_seconds_int" value="30" />
+        <int-array name="carrier_nr_availabilities_int_array" num="2">
+            <item value="1" />
+            <item value="2" />
+        </int-array>
+        <boolean name="enable_nr_advanced_for_standalone_bool" value="true" />
+    </carrier_config>
+
+    <!-- Vodafone Idea (cid: 2023) -->
+    <carrier_config cid="2023">
+        <boolean name="vonr_enabled_bool" value="true" />
+        <boolean name="vonr_setting_visibility_bool" value="true" />
+        <boolean name="carrier_vonr_available_bool" value="true" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_volte_show_switch_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_roaming_enabled_bool" value="true" />
+        <boolean name="carrier_wfc_supports_wifi_only_bool" value="true" />
+        <boolean name="editable_wfc_mode_bool" value="true" />
+        <boolean name="editable_wfc_roaming_mode_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="2" />
+        <int name="carrier_default_wfc_ims_roaming_mode_int" value="2" />
+        <int-array name="5g_nr_ssrsrp_thresholds_int_array" num="4">
+            <item value="-125" />
+            <item value="-115" />
+            <item value="-105" />
+            <item value="-95" />
+        </int-array>
+        <string name="5g_icon_configuration_string">connected_mmwave:5G,connected:5G,connected_rrc_idle:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G</string>
+        <string name="5g_icon_display_grace_period_string">connected_mmwave,legacy,30;connected,legacy,30;not_restricted_rrc_idle,legacy,30;not_restricted_rrc_con,legacy,30</string>
+        <int name="nr_advanced_bands_secondary_timer_seconds_int" value="30" />
+        <int-array name="carrier_nr_availabilities_int_array" num="2">
+            <item value="1" />
+            <item value="2" />
+        </int-array>
+        <boolean name="enable_nr_advanced_for_standalone_bool" value="true" />
+    </carrier_config>
+</carrier_config_list>

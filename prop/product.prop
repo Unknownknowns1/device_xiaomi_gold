@@ -1,6 +1,10 @@
-# Enable blur
+# Disable blur for GPU efficiency
 ro.sf.blurs_are_expensive=1
-ro.surface_flinger.supports_background_blur=1
+ro.surface_flinger.supports_background_blur=0
+
+# Scroll Optimizer
+persist.sys.perf.scroll_opt=true
+persist.sys.perf.scroll_opt.heavy_app=1
 
 # Bluetooth
 bluetooth.profile.asha.central.enabled=true

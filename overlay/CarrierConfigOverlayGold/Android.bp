@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "CarrierConfigOverlayGold",
+    theme: "CarrierConfigOverlayGold",
+    certificate: "platform",
+    product_specific: true,
+}

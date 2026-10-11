@@ -235,7 +235,10 @@ PRODUCT_PACKAGES += \
     init.insmod.mt6833.cfg
 
 # Overlays
+$(call inherit-product, hardware/mediatek/overlay/mssi.mk)
+
 PRODUCT_PACKAGES += \
+    CarrierConfigOverlayGold \
     SystemUIOverlayGold \
     FrameworkResOverlayGold \
     TetheringConfigOverlay \
