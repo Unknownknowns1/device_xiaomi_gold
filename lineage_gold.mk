@@ -17,7 +17,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 AXION_CAMERA_REAR_INFO := 108,2
 AXION_CAMERA_FRONT_INFO := 16
 AXION_PROCESSOR := MTK_Dimensity_6080
-AXION_MAINTAINER := Sai_Krishna
+AXION_MAINTAINER := Sai_Harshith
 TARGET_INCLUDES_LOS_PREBUILTS := true
 TARGET_INCLUDE_AXFX := true
 TARGET_ENABLE_BLUR := true
