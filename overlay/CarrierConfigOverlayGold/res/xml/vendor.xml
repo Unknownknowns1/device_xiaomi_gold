@@ -23,7 +23,7 @@
             <item value="-95" />
         </int-array>
         <string name="5g_icon_configuration_string">connected_mmwave:5G,connected:5G,connected_rrc_idle:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G</string>
-        <string name="5g_icon_display_grace_period_string">connected_mmwave,any,30;connected,any,30;not_restricted_rrc_idle,any,30;not_restricted_rrc_con,any,30</string>
+        <string name="5g_icon_display_grace_period_string">connected_mmwave,legacy,60;connected,legacy,60;not_restricted_rrc_idle,legacy,60;not_restricted_rrc_con,legacy,60;connected_mmwave,any,30;connected,any,30;not_restricted_rrc_idle,any,30;not_restricted_rrc_con,any,30</string>
         <int name="nr_advanced_bands_secondary_timer_seconds_int" value="30" />
         <int-array name="carrier_nr_availabilities_int_array" num="2">
             <item value="1" />
@@ -31,6 +31,11 @@
         </int-array>
         <boolean name="enable_nr_advanced_for_standalone_bool" value="true" />
         <boolean name="nr_timers_reset_if_non_endc_and_rrc_idle_bool" value="false" />
+        <boolean name="signal_strength_nr_nsa_use_lte_as_primary_bool" value="false" />
+        <int name="ims.sa_disable_policy_int" value="0" />
+        <boolean name="nr_timers_reset_on_voice_qos_bool" value="false" />
+        <boolean name="nr_timers_reset_on_plmn_change_bool" value="false" />
+
     </carrier_config>
 
     <!-- Reliance Jio (cid: 2018) -->
@@ -55,13 +60,18 @@
             <item value="-95" />
         </int-array>
         <string name="5g_icon_configuration_string">connected_mmwave:5G,connected:5G,connected_rrc_idle:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G</string>
-        <string name="5g_icon_display_grace_period_string">connected_mmwave,any,30;connected,any,30;not_restricted_rrc_idle,any,30;not_restricted_rrc_con,any,30</string>
+        <string name="5g_icon_display_grace_period_string">connected_mmwave,legacy,60;connected,legacy,60;not_restricted_rrc_idle,legacy,60;not_restricted_rrc_con,legacy,60;connected_mmwave,any,30;connected,any,30;not_restricted_rrc_idle,any,30;not_restricted_rrc_con,any,30</string>
         <int-array name="carrier_nr_availabilities_int_array" num="2">
             <item value="1" />
             <item value="2" />
         </int-array>
         <boolean name="enable_nr_advanced_for_standalone_bool" value="true" />
         <boolean name="nr_timers_reset_if_non_endc_and_rrc_idle_bool" value="false" />
+        <boolean name="signal_strength_nr_nsa_use_lte_as_primary_bool" value="false" />
+        <int name="ims.sa_disable_policy_int" value="0" />
+        <boolean name="nr_timers_reset_on_voice_qos_bool" value="false" />
+        <boolean name="nr_timers_reset_on_plmn_change_bool" value="false" />
+
     </carrier_config>
 
     <!-- Bharti Airtel (cid: 2108 / 2021) -->
@@ -85,13 +95,18 @@
             <item value="-95" />
         </int-array>
         <string name="5g_icon_configuration_string">connected_mmwave:5G,connected:5G,connected_rrc_idle:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G</string>
-        <string name="5g_icon_display_grace_period_string">connected_mmwave,any,30;connected,any,30;not_restricted_rrc_idle,any,30;not_restricted_rrc_con,any,30</string>
+        <string name="5g_icon_display_grace_period_string">connected_mmwave,legacy,60;connected,legacy,60;not_restricted_rrc_idle,legacy,60;not_restricted_rrc_con,legacy,60;connected_mmwave,any,30;connected,any,30;not_restricted_rrc_idle,any,30;not_restricted_rrc_con,any,30</string>
         <int-array name="carrier_nr_availabilities_int_array" num="2">
             <item value="1" />
             <item value="2" />
         </int-array>
         <boolean name="enable_nr_advanced_for_standalone_bool" value="true" />
         <boolean name="nr_timers_reset_if_non_endc_and_rrc_idle_bool" value="false" />
+        <boolean name="signal_strength_nr_nsa_use_lte_as_primary_bool" value="false" />
+        <int name="ims.sa_disable_policy_int" value="0" />
+        <boolean name="nr_timers_reset_on_voice_qos_bool" value="false" />
+        <boolean name="nr_timers_reset_on_plmn_change_bool" value="false" />
+
     </carrier_config>
 
     <carrier_config cid="2021">
@@ -114,13 +129,18 @@
             <item value="-95" />
         </int-array>
         <string name="5g_icon_configuration_string">connected_mmwave:5G,connected:5G,connected_rrc_idle:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G</string>
-        <string name="5g_icon_display_grace_period_string">connected_mmwave,any,30;connected,any,30;not_restricted_rrc_idle,any,30;not_restricted_rrc_con,any,30</string>
+        <string name="5g_icon_display_grace_period_string">connected_mmwave,legacy,60;connected,legacy,60;not_restricted_rrc_idle,legacy,60;not_restricted_rrc_con,legacy,60;connected_mmwave,any,30;connected,any,30;not_restricted_rrc_idle,any,30;not_restricted_rrc_con,any,30</string>
         <int-array name="carrier_nr_availabilities_int_array" num="2">
             <item value="1" />
             <item value="2" />
         </int-array>
         <boolean name="enable_nr_advanced_for_standalone_bool" value="true" />
         <boolean name="nr_timers_reset_if_non_endc_and_rrc_idle_bool" value="false" />
+        <boolean name="signal_strength_nr_nsa_use_lte_as_primary_bool" value="false" />
+        <int name="ims.sa_disable_policy_int" value="0" />
+        <boolean name="nr_timers_reset_on_voice_qos_bool" value="false" />
+        <boolean name="nr_timers_reset_on_plmn_change_bool" value="false" />
+
     </carrier_config>
 
     <!-- Indian Networks fallback (MCC 404 & 405) -->
@@ -139,7 +159,7 @@
             <item value="-95" />
         </int-array>
         <string name="5g_icon_configuration_string">connected_mmwave:5G,connected:5G,connected_rrc_idle:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G</string>
-        <string name="5g_icon_display_grace_period_string">connected_mmwave,any,30;connected,any,30;not_restricted_rrc_idle,any,30;not_restricted_rrc_con,any,30</string>
+        <string name="5g_icon_display_grace_period_string">connected_mmwave,legacy,60;connected,legacy,60;not_restricted_rrc_idle,legacy,60;not_restricted_rrc_con,legacy,60;connected_mmwave,any,30;connected,any,30;not_restricted_rrc_idle,any,30;not_restricted_rrc_con,any,30</string>
         <int-array name="carrier_nr_availabilities_int_array" num="2">
             <item value="1" />
             <item value="2" />
@@ -161,7 +181,7 @@
             <item value="-95" />
         </int-array>
         <string name="5g_icon_configuration_string">connected_mmwave:5G,connected:5G,connected_rrc_idle:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G</string>
-        <string name="5g_icon_display_grace_period_string">connected_mmwave,any,30;connected,any,30;not_restricted_rrc_idle,any,30;not_restricted_rrc_con,any,30</string>
+        <string name="5g_icon_display_grace_period_string">connected_mmwave,legacy,60;connected,legacy,60;not_restricted_rrc_idle,legacy,60;not_restricted_rrc_con,legacy,60;connected_mmwave,any,30;connected,any,30;not_restricted_rrc_idle,any,30;not_restricted_rrc_con,any,30</string>
         <int-array name="carrier_nr_availabilities_int_array" num="2">
             <item value="1" />
             <item value="2" />
