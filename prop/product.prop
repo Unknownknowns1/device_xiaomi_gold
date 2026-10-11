@@ -44,3 +44,12 @@ persist.vendor.ims_support=1
 persist.vendor.volte_support=1
 persist.vendor.mims_support=2
 ro.vendor.md_auto_setup_ims=1
+
+# Telephony / 5G Stability / SA / Smart 5G
+ro.telephony.default_network=33,33
+persist.vendor.radio.5g_mode_pref=1
+persist.vendor.radio.smart_5g=0
+persist.sys.wfc.supported=1
+persist.vendor.radio.nr_disable=0
+persist.vendor.radio.nr_sa_mode=1
+ro.vendor.mtk_telephony_add_on_policy=0
