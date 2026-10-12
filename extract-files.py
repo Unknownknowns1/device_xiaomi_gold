@@ -22,6 +22,34 @@ namespace_imports = [
     'hardware/xiaomi',
 ]
 
+# The codec service and MediaTek's codec libraries are Android 15 binaries. Classes in the
+# Codec2 support libraries changed size in Android 16, so these keep the stock copies of
+# those libraries, which proprietary-files.txt installs as <name>-v35.so.
+codec2_stock_libs = (
+    'libcodec2',
+    'libcodec2_aidl',
+    'libcodec2_hal_common',
+    'libcodec2_hidl@1.0',
+    'libcodec2_hidl@1.1',
+    'libcodec2_hidl@1.2',
+    'libcodec2_hidl_plugin',
+    'libcodec2_soft_common',
+    'libcodec2_vndk',
+    'libsfplugin_ccodec_utils',
+    'libstagefright_aidl_bufferpool2',
+    'libstagefright_bufferpool@2.0.1',
+    'libstagefright_bufferqueue_helper',
+    'libstagefright_foundation',
+)
+
+
+def codec2_fixup() -> blob_fixup:
+    fixup = blob_fixup()
+    for lib in codec2_stock_libs:
+        fixup = fixup.replace_needed(f'{lib}.so', f'{lib}-v35.so')
+    return fixup
+
+
 blob_fixups: blob_fixups_user_type = {
 
     'vendor/lib64/hw/fingerprint.fpc.default.so': blob_fixup()
@@ -108,9 +136,25 @@ blob_fixups: blob_fixups_user_type = {
     # mtk pq
     'vendor/lib64/vendor.mediatek.hardware.pq_aidl-V7-ndk.so': blob_fixup()
         .replace_needed('android.hardware.graphics.common-V4-ndk.so',
-        'android.hardware.graphics.common-V7-ndk.so')
+        'android.hardware.graphics.common-V7-ndk.so'),
 
+    ('vendor/bin/hw/android.hardware.media.c2-mediatek',
+     'vendor/lib64/libcodec2_mtk_c2store.so',
+     'vendor/lib64/libcodec2_mtk_vdec.so',
+     'vendor/lib64/libcodec2_mtk_venc.so',
+     'vendor/lib64/libcodec2_vpp_fa_plugin.so',
+     'vendor/lib64/libcodec2_vpp_mi_plugin.so',
+     'vendor/lib64/libcodec2_vpp_qt_plugin.so',
+     'vendor/lib64/libcodec2_vpp_rs_plugin.so',
+     'vendor/lib64/vpp_hdrmeta_handler_plugin.so',
+     *(f'vendor/lib64/{lib}-v35.so' for lib in codec2_stock_libs)): codec2_fixup(),
 
+    # The crash handler runs inside the codec service and needs these two system calls.
+    # Without them the service is killed halfway through reporting a crash and no
+    # tombstone is written.
+    'vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy': blob_fixup()
+        .add_line_if_missing('sysinfo: 1')
+        .add_line_if_missing('uname: 1'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
