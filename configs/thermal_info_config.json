@@ -20,7 +20,7 @@
       "Name": "BATTERY",
       "Type": "BATTERY",
       "ZoneName": "mtktsbattery",
-      "HotThreshold": ["NaN", "NaN", "NaN", 50.0, 55.0, 59.0, 60.0],
+      "HotThreshold": ["NaN", "NaN", "NaN", 50.0, 52.0, 58.0, 60.0],
       "VrThreshold": "50.0",
       "Multiplier": 0.001
     },
@@ -28,7 +28,7 @@
       "Name": "SKIN",
       "Type": "SKIN",
       "ZoneName": "mtktsAP",
-      "HotThreshold": ["NaN", 43.0, 45.0, 50.0, 70.0, 80.0, 90.0],
+      "HotThreshold": ["NaN", "NaN", "NaN", 50.0, 52.0, 60.0, 70.0],
       "VrThreshold": "50.0",
       "Multiplier": 0.001
     },

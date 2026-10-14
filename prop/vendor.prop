@@ -307,3 +307,8 @@ wifi.interface=wlan0
 
 # Zygote
 zygote.critical_window.minute=10
+
+# Charging & Battery Performance
+persist.vendor.charge.screen_on_current=1
+persist.vendor.battery.screen_on=1
+ro.vendor.battery.fast_charge=1

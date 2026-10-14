@@ -17,6 +17,9 @@ on post-fs-data
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq 0 
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq 0
 
+    # ZRAM setup with zstd algorithm
+    write /sys/block/zram0/comp_algorithm zstd
+
 on boot
     # boot perf. tune
     write /dev/cpuctl/system/cpu.uclamp.min 100
@@ -35,16 +38,57 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq 0
     write /sys/class/devfreq/mtk-dvfsrc-devfreq/userspace/set_freq 0
     write /proc/sys/kernel/sched_migration_cost_ns 200000
-    write /sys/class/devfreq/mtk-dvfsrc-devfreq/userspace/set_freq 0
 
+    # CPU Governor (sugov_ext): Instant ramp-up and stable frame pacing
+    write /sys/devices/system/cpu/cpufreq/policy0/sugov_ext/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpufreq/policy0/sugov_ext/down_rate_limit_us 8000
+    write /sys/devices/system/cpu/cpufreq/policy6/sugov_ext/up_rate_limit_us 0
+    write /sys/devices/system/cpu/cpufreq/policy6/sugov_ext/down_rate_limit_us 8000
+
+    # UClamp tuning: Zero UI micro-stutters and guaranteed foreground headroom
     write /dev/cpuctl/system/cpu.uclamp.min 0
     write /dev/cpuctl/system/cpu.uclamp.latency_sensitive 0
     write /dev/cpuctl/system-background/cpu.uclamp.min 0
     write /dev/cpuctl/system-background/cpu.uclamp.latency_sensitive 0
-    write /dev/cpuctl/foreground/cpu.uclamp.min 0
+    write /dev/cpuctl/foreground/cpu.uclamp.min 5
     write /dev/cpuctl/foreground/cpu.uclamp.latency_sensitive 0
-    write /dev/cpuctl/top-app/cpu.uclamp.min 0
-    write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 0
+    write /dev/cpuctl/top-app/cpu.uclamp.min 15
+    write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 1
     write /dev/cpuctl/background/cpu.uclamp.min 0
     write /dev/cpuctl/background/cpu.uclamp.latency_sensitive 0
+
+    # MediaTek GED GPU DVFS tuning (prevents sudden 1% low FPS drops)
+    write /sys/module/ged/parameters/ged_boost_enable 1
+    write /sys/module/ged/parameters/boost_gpu_enable 1
+    write /sys/module/ged/parameters/boost_extra 1
+    write /sys/module/ged/parameters/ged_smart_boost 1
+    write /sys/module/ged/parameters/gpu_idle 100
+
+    # Memory & Virtual Memory (ZRAM + Cache optimization)
+    write /proc/sys/vm/swappiness 100
+    write /proc/sys/vm/vfs_cache_pressure 50
+    write /proc/sys/vm/dirty_ratio 20
+    write /proc/sys/vm/dirty_background_ratio 5
+
+    # Storage I/O read-ahead tuning
+    write /sys/block/sdc/queue/read_ahead_kb 512
+    write /sys/block/dm-0/queue/read_ahead_kb 512
+    write /sys/block/dm-1/queue/read_ahead_kb 512
+    write /sys/block/dm-2/queue/read_ahead_kb 512
+    write /sys/block/dm-3/queue/read_ahead_kb 512
+    write /sys/block/dm-4/queue/read_ahead_kb 512
+    write /sys/block/dm-5/queue/read_ahead_kb 512
+
+    # Network TCP BBR Congestion Control
+    write /proc/sys/net/ipv4/tcp_congestion_control bbr
+    write /proc/sys/net/ipv4/tcp_fastopen 3
+
+    # Fast charging & Screen-On charging optimization
+    write /sys/class/power_supply/battery/charge_control_limit 0
+    write /sys/class/power_supply/battery/input_suspend 0
+    chmod 0664 /sys/class/power_supply/battery/charge_control_limit
+    chmod 0664 /sys/class/power_supply/battery/constant_charge_current_max
+    chown system system /sys/class/power_supply/battery/charge_control_limit
+    chown system system /sys/class/power_supply/battery/constant_charge_current_max
+
     
