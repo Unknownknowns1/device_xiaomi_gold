@@ -28,5 +28,11 @@ ro.lmk.thrashing_limit_decay=50
 ro.lmk.swap_util_max=100
 ro.lmk.swap_free_low_percentage=10
 
+# 5G NR & TCP Network Buffer Optimization
+net.tcp.buffersize.5g=2097152,4194304,8388608,524288,1048576,4194304
+net.tcp.buffersize.5g_sa=2097152,4194304,8388608,524288,1048576,4194304
+net.tcp.buffersize.5g_nsa=2097152,4194304,8388608,524288,1048576,4194304
+net.tcp.buffersize.lte=524288,1048576,4194304,262144,524288,2097152
+
 # Device specific properties
 import /product/etc/sku/${ro.boot.product.hardware.sku}.prop
